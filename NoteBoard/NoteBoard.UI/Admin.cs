@@ -49,7 +49,7 @@ namespace NoteBoard.UI
             {
                 ListViewItem selected = lstUsers.SelectedItems[0];
                 User selectedUser = selected.Tag as User;
-                if (!selectedUser.IsActive)
+                if (selectedUser.IsActive==false)
                 {
                     DialogResult result = MessageBox.Show("Bu kullanıcıyı onaylıyor musunuz ?", "Onay", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
@@ -60,7 +60,22 @@ namespace NoteBoard.UI
                     }
 
                 }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Bu kullanıcıyı kara listeye almak istiyor musunuz ?", "Onay", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        selectedUser.IsActive = false;
+                        _userController.Update(selectedUser);
+                        FillUser();
+                    }
+                }
             }
+        }
+
+        private void Admin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Show();
         }
     }
 }

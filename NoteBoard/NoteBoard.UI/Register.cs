@@ -45,11 +45,11 @@ namespace NoteBoard.UI
               if (result)
               {
                  MessageBox.Show("Kayıt başarılı.Kullanıcı onay süreciniz başladı.");
-                 this.Close();
                  this.Owner.Show();
+                 this.Close();
               }
             }
-            catch (Exception)
+            catch (Exception )
             {
               throw;
             }

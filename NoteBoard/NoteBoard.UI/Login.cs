@@ -18,7 +18,7 @@ namespace NoteBoard.UI
         public Login()
         {
             InitializeComponent();
-            _userController = new UserController();
+           
         }
 
         private void lnkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -31,12 +31,13 @@ namespace NoteBoard.UI
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
+            
             User currentUser = _userController.GetByLogin(txtUserName.Text, txtPassword.Text);
             if (currentUser!=null)
             {
                 if (currentUser.UserRole==UserRole.Standart)
                 {
-                    Main frm = new Main();
+                    Main frm = new Main(currentUser);
                     //Main ctor'undan user gönderecez
                     frm.Owner = this;
                     frm.Show();
@@ -54,6 +55,11 @@ namespace NoteBoard.UI
             {
                 MessageBox.Show("Kullanıcı bulunamadı!");
             }
+        }
+
+        private void Login_VisibleChanged(object sender, EventArgs e)
+        {
+            _userController = new UserController();
         }
     }
 }

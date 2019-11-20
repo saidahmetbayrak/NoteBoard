@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstTitle = new System.Windows.Forms.ListBox();
+            this.lstNotes = new System.Windows.Forms.ListBox();
             this.lnkPassChange = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
@@ -38,14 +38,14 @@
             this.btnSavve = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lstTitle
+            // lstNotes
             // 
-            this.lstTitle.FormattingEnabled = true;
-            this.lstTitle.ItemHeight = 25;
-            this.lstTitle.Location = new System.Drawing.Point(18, 71);
-            this.lstTitle.Name = "lstTitle";
-            this.lstTitle.Size = new System.Drawing.Size(371, 654);
-            this.lstTitle.TabIndex = 0;
+            this.lstNotes.FormattingEnabled = true;
+            this.lstNotes.ItemHeight = 25;
+            this.lstNotes.Location = new System.Drawing.Point(18, 71);
+            this.lstNotes.Name = "lstNotes";
+            this.lstNotes.Size = new System.Drawing.Size(371, 654);
+            this.lstNotes.TabIndex = 0;
             // 
             // lnkPassChange
             // 
@@ -59,6 +59,7 @@
             this.lnkPassChange.TabIndex = 1;
             this.lnkPassChange.TabStop = true;
             this.lnkPassChange.Text = "Sifre Değiştir";
+            this.lnkPassChange.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkPassChange_LinkClicked);
             // 
             // label1
             // 
@@ -110,6 +111,7 @@
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSavve
             // 
@@ -122,6 +124,7 @@
             this.btnSavve.TabIndex = 12;
             this.btnSavve.Text = "Kaydet";
             this.btnSavve.UseVisualStyleBackColor = false;
+            this.btnSavve.Click += new System.EventHandler(this.btnSavve_Click);
             // 
             // Main
             // 
@@ -136,9 +139,12 @@
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lnkPassChange);
-            this.Controls.Add(this.lstTitle);
+            this.Controls.Add(this.lstNotes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Main";
             this.Text = "Main";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,7 +152,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox lstTitle;
+        private System.Windows.Forms.ListBox lstNotes;
         private System.Windows.Forms.LinkLabel lnkPassChange;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTitle;

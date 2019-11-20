@@ -30,7 +30,7 @@
         {
             this.txtNewPass = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtOldPAss = new System.Windows.Forms.TextBox();
+            this.txtOldPass = new System.Windows.Forms.TextBox();
             this.txtNewPassA = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
@@ -56,13 +56,13 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "Yeni Parola:";
             // 
-            // txtOldPAss
+            // txtOldPass
             // 
-            this.txtOldPAss.Font = new System.Drawing.Font("Candara", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtOldPAss.Location = new System.Drawing.Point(340, 45);
-            this.txtOldPAss.Name = "txtOldPAss";
-            this.txtOldPAss.Size = new System.Drawing.Size(428, 53);
-            this.txtOldPAss.TabIndex = 20;
+            this.txtOldPass.Font = new System.Drawing.Font("Candara", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtOldPass.Location = new System.Drawing.Point(340, 45);
+            this.txtOldPass.Name = "txtOldPass";
+            this.txtOldPass.Size = new System.Drawing.Size(428, 53);
+            this.txtOldPass.TabIndex = 20;
             // 
             // txtNewPassA
             // 
@@ -94,6 +94,7 @@
             this.btnReset.TabIndex = 17;
             this.btnReset.Text = "Sifre Değiştir";
             this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // label1
             // 
@@ -114,13 +115,15 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtNewPass);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtOldPAss);
+            this.Controls.Add(this.txtOldPass);
             this.Controls.Add(this.txtNewPassA);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "ResetPassword";
             this.Text = "ResetPassword";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ResetPassword_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,7 +133,7 @@
 
         private System.Windows.Forms.TextBox txtNewPass;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtOldPAss;
+        private System.Windows.Forms.TextBox txtOldPass;
         private System.Windows.Forms.TextBox txtNewPassA;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnReset;
