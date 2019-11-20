@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NoteBoard.BLL
 {
-    class UserController
+   public class UserController
     {
         UserDAL _userDAL;
         public UserController()

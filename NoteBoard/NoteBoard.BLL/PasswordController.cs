@@ -22,7 +22,7 @@ namespace NoteBoard.BLL
             passwords = passwords.OrderByDescending(a => a.CreatedDate).Take(3).ToList();
             if (passwords.FirstOrDefault(a => a.PasswordText == pass.PasswordText) != null)
             {
-                throw new Exception("Son üç şifreden farklı olmalıdır.");
+                throw new Exception("Son üç şifreden farklı olmalıdır!");
             }
             Delete(passwords.First());
             pass.IsActive = true;
