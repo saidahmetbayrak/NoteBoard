@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace NoteBoard.BLL
 {
-    class NoteController
+   public class NoteController
     {
         NoteDAL _noteDAL;
         public NoteController()
@@ -35,14 +35,15 @@ namespace NoteBoard.BLL
             return _noteDAL.GetByID(noteID);
         }
 
+        public List<Note> GetAll()
+        {
+            return _noteDAL.GetAll().Where(a => a.IsActive == true).ToList();
+        }
+
         public List<Note> GetNotesByUser(int userID)
         {
             return _noteDAL.GetAll().Where(a => a.UserID == userID && a.IsActive).ToList();
         }
 
-        public List<Note> GetAll()
-        {
-            return _noteDAL.GetAll().Where(a => a.IsActive == true).ToList();
-        }
     }
 }

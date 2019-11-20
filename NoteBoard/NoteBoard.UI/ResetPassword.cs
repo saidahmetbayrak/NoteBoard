@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NoteBoard.UI
 {
-    public partial class Form1 : Form
+    public partial class ResetPassword : Form
     {
-        public Form1()
+        public ResetPassword()
         {
             InitializeComponent();
         }
