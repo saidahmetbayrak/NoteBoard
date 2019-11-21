@@ -40,12 +40,14 @@
             // 
             // lstNotes
             // 
+            this.lstNotes.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstNotes.FormattingEnabled = true;
-            this.lstNotes.ItemHeight = 25;
+            this.lstNotes.ItemHeight = 39;
             this.lstNotes.Location = new System.Drawing.Point(18, 71);
             this.lstNotes.Name = "lstNotes";
-            this.lstNotes.Size = new System.Drawing.Size(371, 654);
+            this.lstNotes.Size = new System.Drawing.Size(371, 628);
             this.lstNotes.TabIndex = 0;
+            this.lstNotes.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstNotes_MouseDoubleClick);
             // 
             // lnkPassChange
             // 

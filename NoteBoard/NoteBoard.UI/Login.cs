@@ -31,30 +31,37 @@ namespace NoteBoard.UI
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            
-            User currentUser = _userController.GetByLogin(txtUserName.Text, txtPassword.Text);
-            if (currentUser!=null)
+            try
             {
-                if (currentUser.UserRole==UserRole.Standart)
+                User currentUser = _userController.GetByLogin(txtUserName.Text, txtPassword.Text);
+                if (currentUser != null)
                 {
-                    Main frm = new Main(currentUser);
-                    //Main ctor'undan user gönderecez
-                    frm.Owner = this;
-                    frm.Show();
-                    this.Hide();
+                    if (currentUser.UserRole == UserRole.Standart)
+                    {
+                        Main frm = new Main(currentUser);
+                        //Main ctor'undan user gönderecez
+                        frm.Owner = this;
+                        frm.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        Admin frm = new Admin();
+                        frm.Owner = this;
+                        frm.Show();
+                        this.Hide();
+                    }
                 }
                 else
                 {
-                    Admin frm= new Admin();
-                    frm.Owner = this;
-                    frm.Show();
-                    this.Hide();
+                    MessageBox.Show("Kullanıcı bulunamadı!");
                 }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Kullanıcı bulunamadı!");
-            }
+                MessageBox.Show("Kullanıcı sisteme kayıtlı degil!");
+            }   
+          
         }
 
         private void Login_VisibleChanged(object sender, EventArgs e)

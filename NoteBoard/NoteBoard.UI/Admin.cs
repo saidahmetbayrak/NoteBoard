@@ -15,10 +15,12 @@ namespace NoteBoard.UI
     public partial class Admin : Form
     {
         UserController _userController;
+        UserRole _user;
         public Admin()
         {
             InitializeComponent();
             _userController = new UserController();
+            _user = new UserRole();
         }
 
         private void Admin_Load(object sender, EventArgs e)
@@ -49,17 +51,21 @@ namespace NoteBoard.UI
             {
                 ListViewItem selected = lstUsers.SelectedItems[0];
                 User selectedUser = selected.Tag as User;
-                if (selectedUser.IsActive==false)
+                if (selectedUser.UserRole != UserRole.Admin)
                 {
-                    DialogResult result = MessageBox.Show("Bu kullanıcıyı onaylıyor musunuz ?", "Onay", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-                    if (result == DialogResult.Yes)
+                    if (selectedUser.IsActive==false)
                     {
-                        selectedUser.IsActive = true;
-                        _userController.Update(selectedUser);
-                        FillUser();
-                    }
+                   
+                        DialogResult result = MessageBox.Show("Bu kullanıcıyı onaylıyor musunuz ?", "Onay", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
-                }
+                        if (result == DialogResult.Yes)
+                        {
+                            selectedUser.IsActive = true;
+                            _userController.Update(selectedUser);
+                            FillUser();
+                        }
+                    }
+                    
                 else
                 {
                     DialogResult result = MessageBox.Show("Bu kullanıcıyı kara listeye almak istiyor musunuz ?", "Onay", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
@@ -69,6 +75,11 @@ namespace NoteBoard.UI
                         _userController.Update(selectedUser);
                         FillUser();
                     }
+                }
+                }
+                else
+                {
+                    MessageBox.Show("Admin üzerine islem yapılamaz!!");
                 }
             }
         }

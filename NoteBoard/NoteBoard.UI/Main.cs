@@ -130,5 +130,18 @@ namespace NoteBoard.UI
         {
             this.Owner.Show();
         }
+
+        private void lstNotes_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            lstNotes.DisplayMember = "Title";
+            lstNotes.ValueMember = "Title"            
+            txtTitle.Text = lstNotes.SelectedValue.ToString();
+
+            lstNotes.DisplayMember = "Title";
+            lstNotes.ValueMember = "Content";
+            txtContent.Text = lstNotes.SelectedValue.ToString();
+
+
+        }
     }
 }
