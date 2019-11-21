@@ -1,0 +1,5 @@
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.Model\bin\Debug\NoteBoard.Model.dll
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.Model\bin\Debug\NoteBoard.Model.pdb
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.Model\obj\Debug\NoteBoard.Model.csprojAssemblyReference.cache
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.Model\obj\Debug\NoteBoard.Model.dll
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.Model\obj\Debug\NoteBoard.Model.pdb

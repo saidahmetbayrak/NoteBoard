@@ -1,0 +1,13 @@
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.DAL\bin\Debug\NoteBoard.DAL.dll.config
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.DAL\bin\Debug\NoteBoard.DAL.dll
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.DAL\bin\Debug\NoteBoard.DAL.pdb
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.DAL\bin\Debug\EntityFramework.dll
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.DAL\bin\Debug\NoteBoard.Model.dll
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.DAL\bin\Debug\NoteBoard.Model.pdb
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.DAL\bin\Debug\EntityFramework.xml
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.DAL\obj\Debug\NoteBoard.DAL.csprojAssemblyReference.cache
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.DAL\obj\Debug\NoteBoard.DAL.csproj.CopyComplete
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.DAL\obj\Debug\NoteBoard.DAL.dll
+C:\Users\saida\Documents\GitHub\NoteBoard\NoteBoard\NoteBoard.DAL\obj\Debug\NoteBoard.DAL.pdb
